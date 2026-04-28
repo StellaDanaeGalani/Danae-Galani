@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Στυλιανή Δανάη Γαλάνη | Academic & Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oxford-blue: #0a192f;
+            --noble-gold: #b8860b;
+            --ivory: #fdfcf8;
+            --white: #ffffff;
+            --text-main: #1a1a1a;
+            --text-soft: #4a4a4a;
+            --border-color: rgba(184, 134, 11, 0.3);
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Lora', serif; 
+            background-color: var(--ivory); 
+            color: var(--text-main); 
+            margin: 0; 
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Sophisticated Header --- */
+        header {
+            background: linear-gradient(rgba(10, 25, 47, 0.97), rgba(10, 25, 47, 0.97)), 
+                        url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 10px solid var(--noble-gold);
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin: 0;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .header-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: var(--noble-gold);
+            letter-spacing: 4px;
+            margin-top: 25px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .header-badge {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 8px 20px;
+            border: 1px solid var(--noble-gold);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        /* --- Main Layout --- */
+        .wrapper { max-width: 1050px; margin: 0 auto; padding: 80px 20px; }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--oxford-blue);
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 80px;
+            height: 3px;
+            background: var(--noble-gold);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- Cards & Content --- */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 10px 10px 40px rgba(0,0,0,0.02);
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .card:hover { transform: translateY(-10px); box-shadow: 15px 15px 50px rgba(0,0,0,0.05); }
+
+        .academic-tag {
+            background: var(--oxford-blue);
+            color: var(--white);
+            padding: 4px 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            position: absolute;
+            top: -15px;
+            left: 50px;
+        }
+
+        h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2rem; 
+            color: var(--oxford-blue); 
+            margin-top: 0;
+            border-left: 5px solid var(--noble-gold);
+            padding-left: 20px;
+        }
+
+        .prof-name { color: var(--noble-gold); font-weight: 700; }
+
+        /* --- Multi-Column Academic Grid --- */
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .grid-item {
+            background: #fbfaf5;
+            padding: 25px;
+            border: 1px solid #f0f0f0;
+            transition: 0.3s;
+        }
+
+        .grid-item:hover { background: var(--white); border-color: var(--noble-gold); }
+
+        .grid-item strong { color: var(--oxford-blue); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; display: block; margin-bottom: 8px; }
+
+        /* --- Roua Mat Brand Section --- */
+        .brand-box {
+            background: var(--oxford-blue);
+            color: var(--white);
+            padding: 80px 40px;
+            text-align: center;
+            border: 1px solid var(--noble-gold);
+            margin: 80px 0;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+        }
+
+        .brand-box h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--noble-gold); margin-bottom: 30px; border: none;}
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .feature-item { max-width: 280px; margin: 20px; }
+        .feature-item h4 { color: var(--noble-gold); margin-bottom: 10px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+
+        /* --- Call to Action --- */
+        .booking-btn {
+            display: inline-block;
+            background: var(--noble-gold);
+            color: var(--oxford-blue);
+            padding: 22px 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            border: 2px solid var(--noble-gold);
+        }
+
+        .booking-btn:hover {
+            background: transparent;
+            color: var(--noble-gold);
+            transform: scale(1.05);
+        }
+
+        /* --- Typography Details --- */
+        .italics-ref { font-style: italic; color: var(--text-soft); font-size: 0.95rem; }
+        .protocol-num { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; background: #eee; padding: 2px 8px; border-radius: 3px; }
+
+        footer {
+            background: #050c18;
+            color: rgba(255,255,255,0.4);
+            padding: 80px 20px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .card { padding: 30px; }
+            .header-content h1 { font-size: 2.2rem; }
+            .academic-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Στυλιανή Δανάη Γαλάνη</h1>
+        <div class="header-subtitle">Φιλόλογος & Ιστορικός Επιστήμων | M.A. Candidate</div>
+        <div class="header-badge">Απόφοιτος Προτύπου Σχολής Αναβρύτων</div>
+    </div>
+</header>
+
+<div class="wrapper">
+    
+    <section>
+        <div class="card" style="text-align: center; padding: 30px;">
+            <p>
+                🏛️ <strong>Έδρα:</strong> Πατησίων 212, Αθήνα, 112 53 | 
+                📞 <strong>Τηλ:</strong> 6949931201 | 
+                ✉️ <strong>Email:</strong> stella.d.galani@gmail.com
+            </p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Ακαδημαϊκή Αριστεία</h2>
+
+    <div class="card">
+        <span class="academic-tag">Undergraduate Excellence</span>
+        <h3>Πτυχίο Κλασικής Φιλολογίας</h3>
+        <p class="italics-ref">Φιλοσοφική Σχολή – Πανεπιστήμιο Κρήτης</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>📜 <strong>Αριθμός Πτυχίου:</strong> 2198 | <strong>Βαθμός:</strong> 7,56 (Λίαν Καλώς)</li>
+            <li>🎓 <strong>Παιδαγωγική Επάρκεια (ΠΠΔΕ):</strong> Πιστοποιητικό <span class="protocol-num">341/20.07.2022</span></li>
+            <li>⚖️ <strong>Άδεια Διδασκαλίας:</strong> ΔΔΕ Β' Αθήνας | Αρ. Πρωτ. <span class="protocol-num">7756 / 19.05.2023</span></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <span class="academic-tag">Postgraduate Research | 2025 - 2027</span>
+        <h3>M.A. Νεώτερη και Σύγχρονη Ελληνική Ιστορία</h3>
+        <p><strong>Ακαδημαϊκό Μητρώο:</strong> 538792 | <strong>Εποπτεία:</strong> <span class="prof-name">Ελευθερία Μαντά</span> (Α.Π.Θ.)</p>
+        
+        <div class="academic-grid">
+            <div class="grid-item"><strong>ΠΟΛΙΤΙΚΗ & ΙΔΕΟΛΟΓΙΑ</strong> ΣΕΙ 50-51: Μεγάλη Ιδέα & Εκσυγχρονισμός (Συντ. Α. Κλάψης, Ε. Μαντά)</div>
+            <div class="grid-item"><strong>ΔΙΑΝΟΗΤΙΚΗ ΙΣΤΟΡΙΑ</strong> ΣΕΙ 52: Διαφωτισμός & Εθνική Ταυτότητα (Συντ. Λ. Κουρκουβέλας)</div>
+            <div class="grid-item"><strong>ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ</strong> ΣΕΙ 53-60: Διπλωματία & Διεθνές Σύστημα 1800-1989 (Συντ. Ι. Σακκάς, Ε. Κούμας)</div>
+            <div class="grid-item"><strong>ΙΣΤΟΡΙΟΓΡΑΦΙΑ</strong> ΣΕΙ 54: Τάσεις & Αντιπαραθέσεις (Συντ. Δ. Ζώτου Παπαδημητρίου)</div>
+            <div class="grid-item"><strong>ΚΟΙΝΩΝΙΚΗ ΙΣΤΟΡΙΑ</strong> ΣΕΙ 62-63: Παραβατικότητα & Κοινωνικός Μετασχηματισμός (Συντ. Δ. Τζάκης, Ε. Ζέη)</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="academic-tag">Postgraduate Research | 2025 - 2027</span>
+        <h3>M.A. Δημόσια Ιστορία (Public History)</h3>
+        <p><strong>Ακαδημαϊκό Μητρώο:</strong> 535680 | <strong>Διεύθυνση:</strong> <span class="prof-name">Θεοχάρης Αθανασιάδης</span> (Πάντειο)</p>
+        
+        <div class="academic-grid">
+            <div class="grid-item"><strong>ΘΕΩΡΙΑ & ΠΗΓΕΣ</strong> ΔΙΣ 50-52: Μεθοδολογία & Επιστήμη των Πηγών (Συντ. Θ. Αθανασιάδης, Φ. Γαζή)</div>
+            <div class="grid-item"><strong>ΕΚΠΑΙΔΕΥΣΗ & ΚΡΑΤΟΣ</strong> ΔΙΣ 53-60: Ιστορική Εκπαίδευση & Κρατικοί Θεσμοί (Συντ. Π. Κυπριανός, Ε. Καραμανωλάκης)</div>
+            <div class="grid-item"><strong>ΨΗΦΙΑΚΗ ΕΠΟΧΗ</strong> ΔΙΣ 63: Digital Humanities & Δημόσια Σφαίρα (Συντ. Δ. Μπιλάλης)</div>
+            <div class="grid-item"><strong>ΜΝΗΜΗ & ΠΡΟΦΟΡΙΚΟΤΗΤΑ</strong> ΔΙΣ 61-64: Μουσειολογία & Προφορική Ιστορία (Συντ. Α. Κατσαρίδου, Β. Δαλκαβούκης)</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="academic-tag">Specialized Pedagogy</span>
+        <h3>Εξειδικευμένη Διδακτική Παρέμβαση</h3>
+        <div class="grid-item" style="border: none; padding: 0; margin-top: 20px;">
+            <p>🔹 <strong>Ειδική Αγωγή (615 ώρες - ΕΚΠΑ):</strong> Πολυαισθητηριακή προσέγγιση σε Μαθησιακές Δυσκολίες (Εποπτεία: <strong>Δρ. Αγγ. Μπαστέα</strong>).</p>
+            <p>🔹 <strong>Ψυχικές Διαταραχές (615 ώρες - ΕΚΠΑ):</strong> Διαχείριση συναισθηματικών διαταραχών & εξατομικευμένο πλάνο μελέτης (Εποπτεία: <strong>Ι. Παπαδάτος</strong>).</p>
+        </div>
+    </div>
+
+    <div class="brand-box">
+        <h2>PROJECT: ΡΟΥΑ ΜΑΤ</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+            Μια διδακτική μεθοδολογία υψηλών απαιτήσεων που συνδυάζει την ακαδημαϊκή έρευνα με την προετοιμασία αριστείας.
+        </p>
+        
+        <div class="feature-list">
+            <div class="feature-item">
+                <h4>Γνήσιο Υλικό</h4>
+                <p>Προσωπικά εγχειρίδια Ιστορίας Προσανατολισμού & Οδηγός Πηγών "Ρουά Ματ".</p>
+            </div>
+            <div class="feature-item">
+                <h4>Πρότυπα Σχολεία</h4>
+                <p>Εξειδικευμένο tutoring για την εισαγωγή σε Πρότυπα (Βιωματική γνώση - Αναβρύτων).</p>
+            </div>
+            <div class="feature-item">
+                <h4>Digital Tutoring</h4>
+                <p>Διεθνής εμπειρία μέσω GoStudent με χρήση advanced τηλεκπαίδευσης.</p>
+            </div>
+        </div>
+
+        <a href="http://calendly.com/stella-d-galani" class="booking-btn">Προγραμματισμός Συνέντευξης</a>
+    </div>
+
+    <h2 class="section-title">Επαγγελματική Δέσμευση</h2>
+    <div class="card" style="font-style: italic; text-align: center; color: var(--text-soft);">
+        "Με γνώμονα την ακαδημαϊκή δεοντολογία και την αγάπη για την ιστορική επιστήμη, επιδιώκω την ένταξή μου σε εκπαιδευτικούς φορείς που προάγουν την αριστεία. Στόχος μου είναι η διαρκής μετεξέλιξη της διδακτικής πράξης σε μια εμπειρία ουσιαστικής μάθησης και επιτυχίας."
+    </div>
+
+</div>
+
+<footer>
+    <p>Στυλιανή Δανάη Γαλάνη | Ακαδημαϊκό & Επαγγελματικό Portfolio 2026</p>
+    <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">Designed with Academic Integrity</p>
+</footer>
+
+</body>
+</html>
